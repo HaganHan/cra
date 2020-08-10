@@ -1,47 +1,5 @@
 // 将设置放入此文件中以覆盖默认设置
 {
-  "editor.fontSize": 18,
-  "files.eol": "\n", //如果你在linux/mac上开发，请添加这一项，windows请忽略
-  // "eslint.autoFixOnSave": true, //保存时自动lint
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    },
-    {
-      "language": "html",
-      "autoFix": true
-    }
-  ],
-  "window.zoomLevel": 1,
-  "editor.tabSize": 2,
-  "editor.renderIndentGuides": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.fontFamily": "'Dank Mono', Menlo, Monaco, 'Courier New', monospace",
-  // "editor.formatOnPaste": true,
-  "editor.formatOnSave": false,
-  "editor.formatOnType": false,
-  "files.associations": {
-    "*.cjson": "jsonc",
-    "*.wxss": "css",
-    "*.wxs": "javascript"
-  },
-  "emmet.includeLanguages": {
-    "wxml": "html"
-  },
-  "minapp-vscode.disableAutoConfig": true,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.formatOnPaste": false,
   "pathAlias.aliasMap": {
     "@src": "${cwd}/src",
     "@root": "${cwd}"
