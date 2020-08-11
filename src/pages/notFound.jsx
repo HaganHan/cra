@@ -8,4 +8,6 @@ const NotFound = props => {
   )
 }
 
+NotFound.title = '404'
+
 export default NotFound

@@ -2,10 +2,8 @@ import React from 'react'
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { getPages } from '@src/common/tools'
-import NotFound from '@src/pages/notFound'
-
-const pages = getPages()
+import { pages } from '@src/common/tools'
+import NotFound from '@src/pages/notFound.jsx'
 
 const Router = props => {
   const userInfo = useSelector(state => state.userInfo)

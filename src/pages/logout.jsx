@@ -17,5 +17,6 @@ const Logout = props => {
 }
 
 Logout.mustLogin = true
+Logout.title = '登出'
 
 export default Logout

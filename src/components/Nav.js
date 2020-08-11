@@ -36,6 +36,22 @@ const Nav = props => {
           logout
         </NavLink>
       </span>
+      <span className="nav__item">
+        <NavLink
+          to="/peopleList"
+          activeClassName="nav__item--active"
+          exact>
+          peopleList
+        </NavLink>
+      </span>
+      <span className="nav__item">
+        <NavLink
+          to="/peopleList/peopleDetail"
+          activeClassName="nav__item--active"
+          exact>
+          peopleDetail
+        </NavLink>
+      </span>
       <style jsx>{`
         .nav__item {
           padding-left: 30px;

@@ -11,5 +11,6 @@ const User = props => {
 }
 
 User.mustLogin = true
+User.title = '用户中心'
 
 export default User
