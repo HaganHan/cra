@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import loading from './loading'
+import userInfo from '@src/store/reducers/userInfo'
+import loading from '@src/store/reducers/loading'
 
 export default combineReducers({
+  userInfo,
   loading
 })

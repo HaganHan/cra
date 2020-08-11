@@ -14,10 +14,26 @@ const Nav = props => {
       </span>
       <span className="nav__item">
         <NavLink
-          to="/demo"
+          to="/user"
           activeClassName="nav__item--active"
           exact>
-          demo
+          user
+        </NavLink>
+      </span>
+      <span className="nav__item">
+        <NavLink
+          to="/login"
+          activeClassName="nav__item--active"
+          exact>
+          login
+        </NavLink>
+      </span>
+      <span className="nav__item">
+        <NavLink
+          to="/logout"
+          activeClassName="nav__item--active"
+          exact>
+          logout
         </NavLink>
       </span>
       <style jsx>{`

@@ -1,7 +1,7 @@
 import {
   START_LOADING,
   END_LOADING
-} from './../types'
+} from '../types'
 
 export default function (state = false, action) {
   switch (action.type) {

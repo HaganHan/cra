@@ -9,7 +9,7 @@ const Loading = props => {
       {
         loading ? (
           <div className="loading">
-            加载中...
+            请稍等...
           </div>
         ) : ''
       }

@@ -3,7 +3,7 @@ import React from 'react'
 const Home = props => {
   return (
     <article>
-      home
+      首页
     </article>
   )
 }

@@ -7,6 +7,7 @@ const App = props => {
   return (
     <article className="App">
       <Nav />
+      <hr />
       <Router />
     </article>
   )
