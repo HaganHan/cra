@@ -17,7 +17,7 @@ export const pages = (() => {
 // 根据 pathname 获取面包屑列表
 export function getBreadcrumbList (pathname) {
   const currentPage = pages.find(page => page.path === pathname)
-  document.title = currentPage.Component.title
+  if (!currentPage) return []
   const breadcrumbPaths = []
   currentPage.path.replace(/\/\w+/g, (path, index) => {
     if (index === 0) {
