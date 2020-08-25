@@ -1,7 +1,7 @@
 import {
   UPDATE_USER_INFO
 } from '../types'
-import { startLoading, endLoading } from '@src/store/action/loading'
+import { startLoading, endLoading } from '~src/store/action/loading'
 
 export function updateUserInfo (userName) {
   return async dispatch => {

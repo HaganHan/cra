@@ -1,7 +1,7 @@
 
-// 根据 @src/pages 目录，返回 pages 路由信息
+// 根据 ~src/pages 目录，返回 pages 路由信息
 export const pages = (() => {
-  const context = require.context('@src/pages', true, /.jsx$/)
+  const context = require.context('~src/pages', true, /.jsx$/)
   const filePaths = context.keys()
   const Components = filePaths
     .map(context)

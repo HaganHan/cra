@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { updateUserInfo } from '@src/store/action/userInfo'
+import { updateUserInfo } from '~src/store/action/userInfo'
 
 const Login = props => {
   const dispatch = useDispatch()

@@ -9,9 +9,9 @@ module.exports = {
   webpack: override(
     addBabelPlugin('styled-jsx/babel'),
     addWebpackAlias({
-      '@src': path.resolve(__dirname, 'src'),
-      '@root': path.resolve(__dirname),
-      '@axios': path.resolve(__dirname, 'src/common/axios')
+      '~src': path.resolve(__dirname, 'src'),
+      '~root': path.resolve(__dirname),
+      '~axios': path.resolve(__dirname, 'src/common/axios')
     })
   )
 }

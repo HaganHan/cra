@@ -52,6 +52,14 @@ const Nav = props => {
           peopleDetail
         </NavLink>
       </span>
+      <span className="nav__item">
+        <NavLink
+          to="/ts"
+          activeClassName="nav__item--active"
+          exact>
+          ts
+        </NavLink>
+      </span>
       <style jsx>{`
         .nav__item {
           padding-left: 30px;
