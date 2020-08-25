@@ -54,10 +54,10 @@ const Nav = props => {
       </span>
       <span className="nav__item">
         <NavLink
-          to="/ts"
+          to="/typescript"
           activeClassName="nav__item--active"
           exact>
-          ts
+          typescript
         </NavLink>
       </span>
       <style jsx>{`
