@@ -1,6 +1,8 @@
 import React from 'react'
 
-const NotFound = props => {
+import { Page } from '~src/interface/common'
+
+const NotFound: Page = () => {
   return (
     <article>
       404

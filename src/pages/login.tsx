@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, ChangeEvent } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { updateUserInfo } from '~src/store/action/userInfo'
+import { Page } from '~src/interface/common'
 
-const Login = props => {
+const Login: Page = () => {
   const dispatch = useDispatch()
   const [userName, setUserName] = useState('')
 
-  const onChangeUserName = ev => {
-    setUserName(ev.target.value)
+  const onChangeUserName = (ev: ChangeEvent): void => {
+    setUserName((ev.target as HTMLInputElement).value)
   }
-  const onClickLogin = () => {
+  const onClickLogin = (): void => {
     dispatch(updateUserInfo(userName))
   }
   return (

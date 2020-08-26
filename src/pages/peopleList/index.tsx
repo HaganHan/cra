@@ -1,6 +1,8 @@
 import React from 'react'
 
-const People = props => {
+import { Page } from '~src/interface/common'
+
+const People: Page = () => {
   return (
     <article>
       People

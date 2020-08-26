@@ -1,8 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const User = props => {
-  const userInfo = useSelector(state => state.userInfo)
+import { Page } from '~src/interface/common'
+import { State } from '~src/interface/store'
+
+const User: Page = () => {
+  const userInfo = useSelector((state: State) => state.userInfo)
   return (
     <article>
       当前用户为: {userInfo.userName}

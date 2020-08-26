@@ -1,23 +1,19 @@
-import React from 'react'
-import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
+import React, { FunctionComponent } from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { pages } from '~src/common/tools.ts'
-import NotFound from '~src/pages/notFound.jsx'
+import { pageInfoList } from '~src/common/tools'
+import NotFound from '~src/pages/notFound'
+import { State } from '~src/interface/store'
 
-interface State {
-  userInfo: { userName: string };
-}
-
-const Router = () => {
+const Router: FunctionComponent = () => {
   const userInfo = useSelector((state: State) => state.userInfo)
-  const location = useLocation()
 
   return (
     <Switch>
       <Redirect from="/" to="/home" exact />
       {
-        pages.length && pages.map(page => {
+        pageInfoList.length && pageInfoList.map(page => {
           const { mustLogin, mustLogout } = page.Component
           const { path, Component } = page
           if (mustLogin) {

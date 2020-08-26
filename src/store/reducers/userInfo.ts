@@ -1,16 +1,17 @@
 import {
   UPDATE_USER_INFO
 } from '../types'
+import { UserInfoAction, UserInfoState } from '~src/interface/store'
 
 const initState = {
   userName: ''
 }
 
-export default function (state = initState, action) {
+export default function (state: UserInfoState = initState, action: UserInfoAction): UserInfoState {
   switch (action.type) {
     case UPDATE_USER_INFO:
       return {
-        ...initState,
+        ...state,
         userName: action.userName
       }
     default:

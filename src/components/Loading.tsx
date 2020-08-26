@@ -1,9 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-interface State {
-  loading: boolean;
-}
+import { State } from '~src/interface/store'
 
 const Loading = () => {
   const loading = useSelector((state: State) => state.loading)

@@ -2,11 +2,12 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import { updateUserInfo } from '~src/store/action/userInfo'
+import { Page } from '~src/interface/common'
 
-const Logout = props => {
+const Logout: Page = () => {
   const dispatch = useDispatch()
 
-  const onClickLogout = () => {
+  const onClickLogout = (): void => {
     dispatch(updateUserInfo(''))
   }
   return (

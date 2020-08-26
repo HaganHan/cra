@@ -1,6 +1,8 @@
 import React from 'react'
 
-const Home = props => {
+import { Page } from '~src/interface/common'
+
+const Home: Page = () => {
   return (
     <article>
       <a href="/aaaaa">asd</a>
