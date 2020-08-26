@@ -2,11 +2,15 @@ import React from 'react'
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { pages } from '~src/common/tools'
+import { pages } from '~src/common/tools.ts'
 import NotFound from '~src/pages/notFound.jsx'
 
-const Router = props => {
-  const userInfo = useSelector(state => state.userInfo)
+interface State {
+  userInfo: { userName: string };
+}
+
+const Router = () => {
+  const userInfo = useSelector((state: State) => state.userInfo)
   const location = useLocation()
 
   return (
@@ -31,7 +35,7 @@ const Router = props => {
               <Redirect
                 from={path}
                 key={path}
-                to={{ pathname: '/login', targetPath: path }}
+                to={{ pathname: '/login' }}
               />
             )
           }
@@ -42,7 +46,7 @@ const Router = props => {
                 <Redirect
                   from={path}
                   key={path}
-                  to={{ pathname: location.targetPath || '/home' }}
+                  to={{ pathname: '/home' }}
                 />
               )
             }

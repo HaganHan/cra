@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const Nav = props => {
+const Nav = () => {
   return (
     <nav>
       <span className="nav__item">

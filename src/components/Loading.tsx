@@ -1,8 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-const Loading = props => {
-  const loading = useSelector(state => state.loading)
+interface State {
+  loading: boolean;
+}
+
+const Loading = () => {
+  const loading = useSelector((state: State) => state.loading)
 
   return (
     <article>
