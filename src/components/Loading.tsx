@@ -2,9 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import { State } from '~src/interface/store'
-import { Component } from '~src/interface/common'
 
-const Loading: Component = () => {
+const Loading = (): JSX.Element => {
   const loading = useSelector((state: State) => state.loading)
 
   return (

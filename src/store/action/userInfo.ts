@@ -1,3 +1,4 @@
+import { Dispatch } from 'redux'
 
 import {
   UPDATE_USER_INFO
@@ -5,7 +6,7 @@ import {
 import { startLoading, endLoading } from '~src/store/action/loading'
 
 export function updateUserInfo (userName: string) {
-  return async (dispatch: any): Promise<void> => {
+  return async (dispatch: Dispatch): Promise<void> => {
     dispatch(startLoading())
     await new Promise((resolve) => {
       setTimeout(() => {

@@ -1,16 +1,14 @@
 
-import { PageInfo, BreadcrumbPage } from '~src/interface/common'
+import { PageInfo, BreadcrumbPage, WebpackFileModule } from '~src/interface/common'
 
 // 根据 ~src/pages 目录，返回 pages 路由信息
-
 export const pageInfoList = ((): PageInfo[] => {
   const context = require.context('~src/pages', true, /.tsx$/)
   const filePaths = context.keys()
-  const Components = filePaths
-    .map(context)
-    .map((item: any) => item.default)
-  const pageInfoList = filePaths.map((failPath, index) => {
-    const path = failPath.slice(1, -4).replace(/\/index$/, '')
+  const Components = (filePaths.map(context) as WebpackFileModule[])
+    .map((item) => item.default)
+  const pageInfoList = filePaths.map((filePath, index) => {
+    const path = filePath.slice(1, -4).replace(/\/index$/, '')
     const Component = Components[index]
     return { path, Component }
   })
@@ -32,8 +30,8 @@ export function getBreadcrumbList (pathname: string): BreadcrumbPage[] {
   })
   const breadcrumbPages = breadcrumbPaths
     .reverse()
-    .map(path => pageInfoList.find(pageInfo => pageInfo.path === path))
-    .map((page: any) => ({
+    .map(path => pageInfoList.find(pageInfo => pageInfo.path === path) as PageInfo)
+    .map((page: PageInfo) => ({
       path: page.path,
       title: page.Component.title
     }))

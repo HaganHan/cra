@@ -2,12 +2,10 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 import { getBreadcrumbList } from '~src/common/tools.ts'
-import { Component } from '~src/interface/common'
 
-const Breadcrumb: Component = () => {
+const Breadcrumb = (): JSX.Element => {
   const location = useLocation()
   const breadcrumbList = getBreadcrumbList(location.pathname)
-  console.log(breadcrumbList)
   return (
     <article>
       <NavLink

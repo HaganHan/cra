@@ -1,7 +1,5 @@
 import { FunctionComponent } from 'react'
 
-export interface Component extends FunctionComponent {}
-
 export interface Page extends FunctionComponent {
   title: string;
   mustLogin?: boolean;
@@ -16,4 +14,8 @@ export interface PageInfo {
 export interface BreadcrumbPage {
   path: string;
   title: string;
+}
+
+export interface WebpackFileModule {
+  default: Page;
 }
