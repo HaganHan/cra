@@ -1,7 +1,8 @@
+
 import {
   START_LOADING,
   END_LOADING
-} from '../types'
+} from '~src/store/types'
 import { LoadingAction, LoadingState } from '~src/interface/store'
 
 const initState = {

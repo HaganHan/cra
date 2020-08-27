@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react'
 
-interface Props {
+import { Component } from '~src/interface/common'
+
+interface Props extends PropsWithChildren<any> {
   name: string;
   age: number;
 }
 
-const Cat = (props: Props) => {
+interface Cat<P = {}> extends Component {
+  (props: Props, context?: any): ReactElement<any, any> | null;
+}
+
+const Cat: Cat = (props: any) => {
   return (
     <article>
       <p>name: {props.name}</p>

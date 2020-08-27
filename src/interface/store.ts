@@ -1,7 +1,7 @@
 
 export interface State {
-  userInfo: { userName: string };
-  loading: boolean;
+  userInfo: UserInfoState;
+  loading: LoadingState;
 }
 
 export interface LoadingAction {

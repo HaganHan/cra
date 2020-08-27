@@ -2,14 +2,15 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import { State } from '~src/interface/store'
+import { Component } from '~src/interface/common'
 
-const Loading = () => {
+const Loading: Component = () => {
   const loading = useSelector((state: State) => state.loading)
 
   return (
     <article>
       {
-        loading ? (
+        loading.show ? (
           <div className="loading">
             请稍等...
           </div>

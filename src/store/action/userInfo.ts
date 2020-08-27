@@ -1,10 +1,11 @@
+
 import {
   UPDATE_USER_INFO
-} from '../types'
+} from '~src/store/types'
 import { startLoading, endLoading } from '~src/store/action/loading'
 
-export function updateUserInfo (userName) {
-  return async dispatch => {
+export function updateUserInfo (userName: string) {
+  return async (dispatch: any): Promise<void> => {
     dispatch(startLoading())
     await new Promise((resolve) => {
       setTimeout(() => {

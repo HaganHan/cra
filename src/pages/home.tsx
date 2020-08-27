@@ -10,4 +10,6 @@ const Home: Page = () => {
   )
 }
 
+Home.title = '首页'
+
 export default Home

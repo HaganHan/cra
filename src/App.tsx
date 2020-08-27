@@ -4,8 +4,9 @@ import Router from '~src/components/Router'
 import Nav from '~src/components/Nav'
 import Breadcrumb from '~src/components/Breadcrumb'
 import '~src/public.scss'
+import { Component } from '~src/interface/common'
 
-const App = () => {
+const App: Component = () => {
   return (
     <article className="App">
       <Nav />

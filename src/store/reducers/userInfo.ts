@@ -1,6 +1,7 @@
+
 import {
   UPDATE_USER_INFO
-} from '../types'
+} from '~src/store/types'
 import { UserInfoAction, UserInfoState } from '~src/interface/store'
 
 const initState = {
