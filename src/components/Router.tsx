@@ -22,9 +22,9 @@ const Router: FunctionComponent = () => {
                 <Route
                   key={path}
                   path={path}
-                  exact>
-                  <Component />
-                </Route>
+                  component={Component}
+                  exact
+                />
               )
             }
             return (
@@ -50,18 +50,18 @@ const Router: FunctionComponent = () => {
               <Route
                 key={path}
                 path={path}
-                exact>
-                <Component />
-              </Route>
+                component={Component}
+                exact
+              />
             )
           }
           return (
             <Route
               key={path}
               path={path}
-              exact>
-              <Component />
-            </Route>
+              component={Component}
+              exact
+            />
           )
         })
       }
